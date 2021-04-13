@@ -1,0 +1,32 @@
+This is a small project created while follow along with "How to Create A Video Chat App with WebRTC" video on YouTube.
+
+Here we'll be learning how to build a video chat web app which I may use in later project. This document list the step-by-step approach for this solution.
+Once completed the web app will allow users to call one or more users, display a window for each user in a given calling session, and assign each user a 
+Unique User ID (UUID). It'll also automatically create the rooms used for a given calling session.
+
+
+<--Getting Started-->
+- For starters make sure node.js and npm are both installed
+- A Text Editor or IDE such as VS Code, VIM, etc
+
+<-- Steps -->
+1.) - Using the CLI type "npm init -y" will get our server boiler template JSON file generated titled "Package.json". 
+
+2.) Next we need to install our dependencies using CLI
+    type: " npm i express ejs socket.io"
+        -Express is our server
+        -EJS is our templating language
+        -Websocket.io is used to allow us to communicate back and forth with the server 
+
+3.) Now we need to install a dependency that allows us to create dynamic URLs (basically chatroom numbers).
+    type : "npm i uuid"
+
+4.) Now we install a dev dependency that allows us to quickly refresh our application every time we make changes so we don't have to manually restart 
+    our server every time a change happens.
+        type: "npm i --save-dev nodemon"
+
+5.) Create a server.js file for our server configuration.
+
+6.) Got to the "package.json" file and under "scripts" create the following to point to our "server.js" server configuration file.
+    type the following key:value statement: ' "devStart" : "nodemon server.js" '
+    
