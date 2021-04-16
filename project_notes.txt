@@ -25,8 +25,28 @@ Unique User ID (UUID). It'll also automatically create the rooms used for a give
     our server every time a change happens.
         type: "npm i --save-dev nodemon"
 
-5.) Create a server.js file for our server configuration.
+5.) Create a server.js file for our server configuration code.
 
-6.) Got to the "package.json" file and under "scripts" create the following to point to our "server.js" server configuration file.
-    type the following key:value statement: ' "devStart" : "nodemon server.js" '
-    
+6.) Go to the "package.json" file:
+    -Under "scripts" create the following script to point to our "server.js" server configuration file.
+        type the following key:value pair statement: ' "devStart" : "nodemon server.js"
+    *This allows us to get real-time updates when we make changes if the following statement is typed into the CLI and running:
+        "npm run devStart"
+
+7.) Check to make sure everything so far is correct by doing the following:
+    i.) In the server.js file write a print statement to display in the console:
+        console.log("some statement")
+    ii.) Save changes
+    iii.) In the CLI run:
+        npm run devStart
+    iv.) Repeat i and ii to ensure everything works as it should.
+
+8.) Write the code needed to setup the Express server. Goto "server.js" file to look at how it was done and brief descriptions for each part.
+
+9.) Create the view folder, this is where template view files will go.
+
+10. Create "rooms.ejs" file.
+    -! Note: .ejs is the file type used since we're using the ejs library for our view engine.
+
+11.) Time to add the needed code for rooms.ejs view file:
+    i.) Type "!" and hit tab key to generate a standard boilerplate 
